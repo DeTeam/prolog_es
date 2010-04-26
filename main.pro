@@ -1,0 +1,8 @@
+domains
+
+predicates
+
+goal
+
+
+clauses
