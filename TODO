@@ -1,4 +1,5 @@
 TODO:
 
+0. Rakefile with useful stuff
 1. DB part(create new, load, change and so on) predicates
 2. Interface part(windows, switching UI and so on)

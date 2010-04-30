@@ -2,14 +2,17 @@ domains
 	I = integer
 	S = symbol
 	L = integer*
-	
-/* Simptom DataBase */	
+
+
+
+/* Simptom DataBase */
 database - simptom_db
 	simpton(I, S)
-	
-/* Bolezn DataBase */	
+
+/* Bolezn DataBase */
 database - bolezn_db
 	bolezn(I, S, I, I, I, I, I, I, I, I)
+
 
 predicates
 	/*
@@ -18,31 +21,38 @@ predicates
 	main_loop
 	main_window
 	main_menu
-	
+	menu_switch(I)
+
 	/*
 		Window stuff
 	*/
-	
-	
+	titul_window
+	about_window
+	view_db_window
+
 	/*
 		IO stuff(UI)
 	*/
-	
+
 	/*
 		DB stuff
 	*/
-	
-goal
+
+	new_db
+	load_db
+	save_db
+
+	add_db_simptom
+	add_db_bolezngoal
 	main_loop
-	
 clauses
 
-	main_loop:-
+    main_loop:-
 		main_window, main_menu.
 
 	main_window:-
 		makewindow(99,65,7,"Main Menu",0,0,24,80).
-		
+
 	main_menu:-
 		write(" Main menu: "), nl, nl,
 		write("   1. About"), nl,
@@ -57,7 +67,9 @@ clauses
 		write("     Action: ")m
 		readchar(N),
 		menu_switch(N).	
-		
-		
-		
-		
+    titul_window:-
+        createwindow().
+    about_window:-
+        create_window().
+    view_db_window:-
+        create_window().
