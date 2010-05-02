@@ -19,7 +19,7 @@ desc "Build prolog programm"
 task :build do
 
 	files = [
-		"domains.pro",
+    "domains.pro",
 		"database.pro",
 		"predicates.pro",
 		"goal.pro",

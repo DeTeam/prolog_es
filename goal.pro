@@ -1,2 +1,2 @@
 goal
-	main_loop
+	titul, clear_db, main_loop.

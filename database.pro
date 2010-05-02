@@ -2,7 +2,7 @@
 
 /* Simptom DataBase */
 database - simptom_db
-	simpton(I, S)
+	simptom(I, S)
 
 /* Bolezn DataBase */
 database - bolezn_db
