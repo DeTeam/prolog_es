@@ -29,13 +29,13 @@ clauses
         exit.
 
     menu_switch(1):-
-        about_window, about_text, main_loop.
+        about_window, about_text, readchar(_), main_loop.
 
     menu_switch(2):-
         load_db, main_loop.
 
     menu_switch(3):-
-            save_db, main_loop.
+        save_db, main_loop.
 
     menu_switch(4):-
         clear_db, main_loop.

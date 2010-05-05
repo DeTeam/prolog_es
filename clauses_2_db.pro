@@ -1,9 +1,9 @@
 
     clear_db1:-
-        retreatall(simptom(_, _)).
+        retractall(simptom(_, _)).
 
     clear_db2:-
-        retreatall(bolezn(_, _, _, _, _, _, _, _, _, _)).
+        retractall(bolezn(_, _, _, _, _, _, _, _, _, _)).
 
     clear_db:-
         clear_db1, clear_db2.
@@ -11,10 +11,11 @@
     add_db_simptom:-
         write("Vvedite nomer(1-8)": ), readint(N),
         write("Vvedite simptom: "), readln(S),
+        retractall(simptom(N,_)),
         assertz(simptom(N,S), simptom_db).
 
     add_db_bolezn:-
-        write("Vvedite nomer(1-8)": ), readint(N),
+        write("Vvedite nomer": ), readint(N),
         write("Vvedite bolezn: "), readln(B),
         write("Nomer S1: "), readint(S1),
         write("Nomer S2: "), readint(S2),
@@ -24,7 +25,16 @@
         write("Nomer S6: "), readint(S6),
         write("Nomer S7: "), readint(S7),
         write("Nomer S8: "), readint(S8),
+        retractall(bolezn(N, _, _, _, _, _, _, _, _, _)),
         assertz(bolezn(N,B,S1,S2,S3,S4,S5,S6,S7,S8), bolezn_db).
+
+    delete_db_simptom:-
+        write("Vvedite nomer(1-8): "), readint(N),
+        retractall(simptom(N,_)).
+
+    delete_db_bolezn:-
+        write("Vvedite nomer: "), readint(N),
+        retractall(bolezn(N, _, _, _, _, _, _, _, _, _)).
 
 
     save_db1:-

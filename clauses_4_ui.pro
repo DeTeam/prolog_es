@@ -16,9 +16,9 @@
         edit_switch(N).
 
     edit_switch(1):-
-        add_db_simptom.
+        delete_db_simptom.
     edit_switch(2):-
-        add_db_bolezn.
+        delete_db_bolezn.
 
     view_db:-
         view_db_window, view_bolezn_all, nl,

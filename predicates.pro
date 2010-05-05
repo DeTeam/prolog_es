@@ -61,6 +61,8 @@ predicates
 
 	add_db_simptom
 	add_db_bolezn
+    delete_db_simptom
+	delete_db_bolezn
 
     /*
         Other stuff
