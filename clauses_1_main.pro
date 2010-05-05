@@ -20,7 +20,7 @@
 		write("   8. Logic Conclusion"), nl, nl,
 		write("   0. Exit"), nl,nl,
 		write("     Action: "),
-		readchar(N),
+		readint(N),
         removewindow,
 		menu_switch(N).
 

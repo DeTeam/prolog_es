@@ -47,9 +47,9 @@
 
     load_db1:-
         write("Vvedite imya db simptomov: "), readln(N),
-        existfile(N), consult(n, simptom_db).
+        existfile(N), consult(N, simptom_db).
 
     load_db2:-
         write("Vvedite imya db bolezney: "), readln(N),
-        existfile(N), consult(n, bolezn_db).
+        existfile(N), consult(N, bolezn_db).
 

@@ -89,3 +89,7 @@
         write(" Simptomi:"),nl,
         view_simptom(S1), view_simptom(S2), view_simptom(S3), view_simptom(S4),
         view_simptom(S5), view_simptom(S6), view_simptom(S7), view_simptom(S8),nl,nl.
+
+
+    logic_conclusion.
+
