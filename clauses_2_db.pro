@@ -9,13 +9,13 @@
         clear_db1, clear_db2.
 
     add_db_simptom:-
-        write("Vvedite nomer(1-8)": ), readint(N),
+        write("Vvedite nomer(1-8): "), readint(N),
         write("Vvedite simptom: "), readln(S),
         retractall(simptom(N,_)),
         assertz(simptom(N,S), simptom_db).
 
     add_db_bolezn:-
-        write("Vvedite nomer": ), readint(N),
+        write("Vvedite nomer: "), readint(N),
         write("Vvedite bolezn: "), readln(B),
         write("Nomer S1: "), readint(S1),
         write("Nomer S2: "), readint(S2),
@@ -39,11 +39,11 @@
 
     save_db1:-
         write("Vvedite imya db simptomov: "), readln(N),
-        save(n, simptom_db).
+        save(N, simptom_db).
 
     save_db2:-
         write("Vvedite imya db bolezney: "), readln(N),
-        save(n, bolezn_db).
+        save(N, bolezn_db).
 
     load_db1:-
         write("Vvedite imya db simptomov: "), readln(N),

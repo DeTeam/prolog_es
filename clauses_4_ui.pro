@@ -10,15 +10,37 @@
 
     edit_db:-
         dialog_window("Kakuju DB ?"), cursor(2,2),
-        write("  1. Simptom "),nl
+        write("  1. Simptom "),nl,
         write("  2. Bolezn"), nl,
         readint(N), removewindow,
         edit_switch(N).
 
     edit_switch(1):-
         delete_db_simptom.
+
     edit_switch(2):-
         delete_db_bolezn.
+
+
+    add_to_db:-
+        dialog_window("Simptom ili bolezn?"), cursor(2,2),
+        write("  1. Simptom "),nl,
+        write("  2. Bolezn"), nl,
+        write("  0. Main Menu"), nl,
+        readint(N), removewindow,
+        add_switch(N).
+
+    add_switch(1):-
+        dialog_window("Add simptom"),
+        add_db_simptom,
+        removewindow, add_to_db.
+
+    add_switch(2):-
+        dialog_window("Add bolezn"),
+        add_db_bolezn,
+        removewindow, add_to_db.
+
+    add_switch(_).
 
     view_db:-
         view_db_window, view_bolezn_all, nl,
@@ -44,24 +66,26 @@
 
     view_bolezn_all:-
         view_bolezn(_), fail.
+
     view_bolezn_all.
 
     view_simptom_all:-
         view_simptom(_), fail.
+
     view_simptom_all.
 
-    view simptom(I):-
-        simptom(I, S),
+    view_simptom(N):-
+        simptom(N, S),
         not(S=""),
-        write(" Simptom[",I,"]: ", S), nl.
+        write(" Simptom[",N,"]: ", S), nl.
     
-    view_bolezn(I):-
-        bolezn(I, S, _, _, _, _, _, _, _, _),
-        write(" Bolezn[",I,"]: ", S).
+    view_bolezn(N):-
+        bolezn(N, S, _, _, _, _, _, _, _, _),
+        write(" Bolezn[",N,"]: ", S).
 
     view_bolezn_complex(I):-
         bolezn(I, S, S1, S2, S3, S4, S5, S6, S7, S8),
         write(" Bolezn[",I,"]: ", S),nl,
         write(" Simptomi:"),nl,
-        view simptom(S1), view simptom(S2), view simptom(S3), view simptom(S4),
-        view simptom(S5), view simptom(S6), view simptom(S7), view simptom(S8),nl,nl.
+        view_simptom(S1), view_simptom(S2), view_simptom(S3), view_simptom(S4),
+        view_simptom(S5), view_simptom(S6), view_simptom(S7), view_simptom(S8),nl,nl.

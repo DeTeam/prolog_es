@@ -23,9 +23,10 @@ task :build do
 		"database.pro",
 		"predicates.pro",
 		"goal.pro",
-		/clauses_*/
 	]
-	
+  clauses = /clauses_*/
+	clauses_text = ""
+
 	content = ""
 	files.each do |fname|
 		if String === fname
@@ -37,11 +38,18 @@ task :build do
 			end
 		end
 	end
+
+  p = Pathname(".")
+  p.children.each do |path|
+    clauses_text += get_file_as_string(path.basename) if path.basename.to_s =~ clauses
+  end
 	
 	filename = ARGV[1] if ARGV[1]
 	filename ||= "main.pro"
 	File.open(filename, "w") do |file|
 		file << content
+    file << "\n\nclauses\n\n"
+    file << clauses_text
 	end
 end
 

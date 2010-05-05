@@ -29,6 +29,8 @@ predicates
     edit_db
     edit_switch(I)
 
+    add_switch(I)
+
     view_db
     view_db_switch(I)
 
@@ -37,7 +39,7 @@ predicates
     view_bolezn_complex(I)
     view_bolezn(I)
     view_bolezn_all
-    view simptom(I)
+    view_simptom(I)
     view_simptom_all
 
     titul_text

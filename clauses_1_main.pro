@@ -1,6 +1,5 @@
 
-clauses
-    
+
     blank.
 
     main_loop:-
