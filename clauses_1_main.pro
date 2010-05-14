@@ -6,7 +6,7 @@
 		main_window, main_menu.
 
 	main_window:-
-		makewindow(15, 65, 7, "Main Menu", 0, 0, 24, 80).
+		makewindow(13, 15, 0, "Main Menu", 0, 0, 24, 80).
 
 	main_menu:-
 		write(" Main menu: "), nl, nl,

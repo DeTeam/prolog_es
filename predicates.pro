@@ -16,6 +16,7 @@ predicates
 	about_window
 	view_db_window
     dialog_window(S)
+    logic_window
 
 	/*
 		IO stuff(UI) + Static text
@@ -35,6 +36,8 @@ predicates
     view_db_switch(I)
 
     logic_conclusion
+    logic_build_list(L)
+    logic_loop_bolezn(L)
 
     view_bolezn_complex(I)
     view_bolezn(I)
