@@ -3,7 +3,7 @@
     logic_conclusion:-
         logic_window, cursor(3,3),
         L = [],
-        logic_build_list(L, 1), obr_list(L, L1), logic_loop_bolezn(L1).
+        logic_build_list(L, 1), obr_list(L, L1), logic_loop_bolezn(L1), remove_window.
 
     logic_build_list(L, N):-
         simptom(N,S),

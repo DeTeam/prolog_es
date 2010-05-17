@@ -74,4 +74,5 @@ predicates
     */
 
     blank
+    obr_list(L, L)
 
