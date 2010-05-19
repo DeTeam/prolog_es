@@ -38,6 +38,7 @@ predicates
     logic_conclusion
     logic_build_list(L, I)
     logic_loop_bolezn(L)
+    logic_has_simptom(S)
 
     view_bolezn_complex(I)
     view_bolezn(I)
@@ -79,4 +80,7 @@ predicates
     obr_list(L, L)
     add_list(I,L,L)
     conc_list(L,L,L)
+    compare_lists(L,L)
+    sub_list(L,L)
+    
 

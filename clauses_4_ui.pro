@@ -12,8 +12,8 @@
         dialog_window("Kakuju DB ?"), cursor(2,2),
         write("  1. Simptom "),nl,
         write("  2. Bolezn"), nl,
-        readint(N), removewindow,
-        edit_switch(N).
+        readint(N), 
+        edit_switch(N), removewindow,.
 
     edit_switch(1):-
         delete_db_simptom.
@@ -75,19 +75,18 @@
     view_simptom_all.
 
     view_simptom(N):-
+        not(N=0),
         simptom(N, S),
         not(S=""),
         write(" Simptom[",N,"]: ", S), nl.
 
-    view_simptom(_):-
-        write("Simptom ne najden"), nl.
+    view_simptom(_).
     
     view_bolezn(N):-
         bolezn(N, S, _, _, _, _, _, _, _, _),
-        write(" Bolezn[",N,"]: ", S).
+        write(" Bolezn[",N,"]: ", S), nl.
 
-    view_bolezn(_):-
-        write("Bolezn ne najdena"), nl.
+    view_bolezn(_).
 
     view_bolezn_complex(N):-
         bolezn(N, S, S1, S2, S3, S4, S5, S6, S7, S8),
