@@ -63,6 +63,8 @@ predicates
     clear_db1
     clear_db2
 
+    default_db
+
 
 	add_db_simptom
 	add_db_bolezn
@@ -75,4 +77,6 @@ predicates
 
     blank
     obr_list(L, L)
+    add_list(I,L,L)
+    conc_list(L,L,L)
 

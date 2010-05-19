@@ -78,16 +78,24 @@
         simptom(N, S),
         not(S=""),
         write(" Simptom[",N,"]: ", S), nl.
+
+    view_simptom(_):-
+        write("Simptom ne najden"), nl.
     
     view_bolezn(N):-
         bolezn(N, S, _, _, _, _, _, _, _, _),
         write(" Bolezn[",N,"]: ", S).
 
-    view_bolezn_complex(I):-
-        bolezn(I, S, S1, S2, S3, S4, S5, S6, S7, S8),
-        write(" Bolezn[",I,"]: ", S),nl,
+    view_bolezn(_):-
+        write("Bolezn ne najdena"), nl.
+
+    view_bolezn_complex(N):-
+        bolezn(N, S, S1, S2, S3, S4, S5, S6, S7, S8),
+        write(" Bolezn[",N,"]: ", S),nl,
         write(" Simptomi:"),nl,
         view_simptom(S1), view_simptom(S2), view_simptom(S3), view_simptom(S4),
         view_simptom(S5), view_simptom(S6), view_simptom(S7), view_simptom(S8),nl,nl.
 
+    view_bolezn_complex(_):-
+        write("Bolezn ne najdena"), nl.
 

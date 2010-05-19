@@ -7,8 +7,10 @@
     logic_build_list(L, N):-
         N < 9,
         simptom(N,_),
+        readchar("y"),
         N1 = N + 1,
-        logic_build_list([N|L], N1).
+        add_list(N, L, L1),
+        logic_build_list(L1, N1).
 
     logic_build_list(_, _).
 
