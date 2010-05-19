@@ -36,7 +36,7 @@ predicates
     view_db_switch(I)
 
     logic_conclusion
-    logic_build_list(L)
+    logic_build_list(L, I)
     logic_loop_bolezn(L)
 
     view_bolezn_complex(I)

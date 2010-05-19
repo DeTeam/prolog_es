@@ -91,5 +91,3 @@
         view_simptom(S5), view_simptom(S6), view_simptom(S7), view_simptom(S8),nl,nl.
 
 
-    logic_conclusion.
-
