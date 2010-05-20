@@ -25,5 +25,4 @@
 		write("                                 MOSCOW 2010").
 
     about_text:-
-        blank.
-
+        titul_text.

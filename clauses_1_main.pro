@@ -28,7 +28,7 @@
         exit.
 
     menu_switch(1):-
-        about_window, about_text, readchar(_), main_loop.
+        about_window, about_text, readchar(_), removewindow,  main_loop.
 
     menu_switch(2):-
         load_db, main_loop.
@@ -50,4 +50,7 @@
 
     menu_switch(8):-
         logic_conclusion, main_loop.
+
+    menu_switch(_):- main_loop.
+
 

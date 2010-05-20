@@ -3,13 +3,13 @@
         titul_window, titul_text, readchar(_), removewindow.
 
     save_db:-
-        dialog_window("Save DB"), cursor(2,2), save_db1, save_db2, removewindow.
+        dialog_window("Save DB"), nl,save_db1, save_db2, removewindow.
 
     load_db:-
-        dialog_window("Load DB"), cursor(2,2), load_db1, load_db2, removewindow.
+        dialog_window("Load DB"), nl, load_db1, load_db2, removewindow.
 
     edit_db:-
-        dialog_window("Kakuju DB ?"), cursor(2,2),
+        dialog_window("Kakuju DB ?"), nl,
         write("  1. Simptom "),nl,
         write("  2. Bolezn"), nl,
         readint(N), 
@@ -23,7 +23,7 @@
 
 
     add_to_db:-
-        dialog_window("Simptom ili bolezn?"), cursor(2,2),
+        dialog_window("Simptom ili bolezn?"), nl,
         write("  1. Simptom "),nl,
         write("  2. Bolezn"), nl,
         write("  0. Main Menu"), nl,

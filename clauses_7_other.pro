@@ -26,3 +26,13 @@
 		delete_list(T, X, Lx).
 	delete_list([H|T], X, [H|T1]):-
 		delete_list(T, X, T1).
+
+    incl_list(X,[X|_]):- !.
+	incl_list(X,[_|T]):-
+		incl_list(X,T).
+
+
+    sub_list2([], _).
+    sub_list2([H|T], L):-
+        incl_list(H, L), sub_list2(T, L).
+

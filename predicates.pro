@@ -82,6 +82,8 @@ predicates
     conc_list(L,L,L)
     compare_lists(L,L)
     sub_list(L,L)
-    delete_list(L,L)
+    sub_list2(L,L)
+    incl_list(I,L)
+    delete_list(L,I,L)
     
 
