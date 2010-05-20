@@ -13,7 +13,7 @@
         write("  1. Simptom "),nl,
         write("  2. Bolezn"), nl,
         readint(N), 
-        edit_switch(N), removewindow,.
+        edit_switch(N), removewindow.
 
     edit_switch(1):-
         delete_db_simptom.

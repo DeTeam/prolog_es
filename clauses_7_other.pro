@@ -19,5 +19,10 @@
     sub_list(P,L):-
 		conc_list(_,X,L),
 		conc_list(P,_,X),!.
-	sub_list(P,L).
 
+    delete_list([], _, []).
+	delete_list([X|T], X, Lx):-
+		!,
+		delete_list(T, X, Lx).
+	delete_list([H|T], X, [H|T1]):-
+		delete_list(T, X, T1).

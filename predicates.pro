@@ -36,7 +36,7 @@ predicates
     view_db_switch(I)
 
     logic_conclusion
-    logic_build_list(L, I)
+    logic_build_list(L, L, I)
     logic_loop_bolezn(L)
     logic_has_simptom(S)
 
@@ -82,5 +82,6 @@ predicates
     conc_list(L,L,L)
     compare_lists(L,L)
     sub_list(L,L)
+    delete_list(L,L)
     
 
